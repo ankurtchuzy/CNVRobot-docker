@@ -30,7 +30,7 @@ WORKDIR /home/mambauser
 RUN git clone https://github.com/AnetaMikulasova/CNVRobot.git \
     && find CNVRobot/Scripts -name "*.sh" -exec chmod +x {} \;
 # Doenload databases and extract them
-RUN wget "https://zenodo.org/records/20761773/files/Databases.zip?download=1" \
+RUN wget -q "https://zenodo.org/records/20761773/files/Databases.zip?download=1" \
     -O Databases.zip && \
     unzip Databases.zip && \
     rm Databases.zip
